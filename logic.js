@@ -2,7 +2,7 @@ const express= require('express');
 const app= express();
 const bodyp=require('body-parser');
 app.use(bodyp.urlencoded({extended:true}));
-
+app.use(express.static(__dirname + '/public'));
 app.get('/',(req,res)=>
 {
     res.sendFile(__dirname+'/index.html');
