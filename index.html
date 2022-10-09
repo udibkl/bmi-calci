@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BMI Calci</title>
     <style>
         
     </style>
 </head>
   <body>
+    <div class="view-mode-container">
+      <input type="checkbox" name="view-mode" id="btn-view-mode">
+      <label for="btn-view-mode" class="label-view-mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+    
     <form method="POST" class="form-container">
+      
         <div class="form-group">
         <input
           type="text"
@@ -25,5 +36,17 @@
       <button type="submit" class="submit">Calculate BMI</button>
     </form>
   </body>
+  <script>
+      const viewMode=document.getElementById('btn-view-mode');
+      viewMode.addEventListener('change',()=>{
+        document.body.classList.toggle('light');
+        document.querySelector('.form-container').classList.toggle('light');
+        document.querySelector('.submit').classList.toggle('light');
+        document.querySelector('.ball').classList.toggle('light');
+        document.querySelectorAll('.form-item').forEach((item)=>item.classList.toggle('light'));
+      });
+
+  </script>
   <script src="logic.js"></script>
+
 </html>
