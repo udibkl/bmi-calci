@@ -1,6 +1,7 @@
 body{
     font-family: poppins;
     background-color: #000;
+    transition: background .2s linear;
 }
 
 .form-container{
@@ -15,7 +16,8 @@ body{
     width: 65%;
     max-width: 400px;
     padding:50px 40px;
-    border-radius: 5px;
+    border-radius: 15px;
+    transition: background .2s linear;
 }
 
 .form-group{
@@ -29,6 +31,7 @@ body{
 .form-item:focus{
     outline:2px solid #a03df7;
     color:#a03df7;
+    
 }
 
 .form-item{
@@ -40,6 +43,7 @@ body{
     background:rgb(31, 31, 31);
     border: none;
     color: #fff;
+    transition: background .2s linear;
 }
 
 .submit{
@@ -50,4 +54,98 @@ body{
     cursor: pointer;
     border: none;
     font-weight: bold;
+}
+
+.view-mode-container
+{
+    position: absolute;
+    top:20%;
+    left:80%;
+}
+
+#btn-view-mode
+{
+    opacity: 0;
+    display: none;
+}
+
+#btn-view-mode:checked + .label-view-mode .ball
+{
+    transform: translateX(24px);
+}
+
+.label-view-mode
+{
+    background:#353535;
+    box-sizing: border-box;
+    display: flex;
+    height:25px;
+    width: 50px;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    position: relative;
+}
+
+.fa-moon
+{
+    color:#f7e600;
+}
+
+.fa-sun
+{
+    color:#f76f00;
+}
+
+.ball
+{
+    background:#000000;
+    border-radius: 50px;
+    height: 21px;
+    width: 21px;
+    top:2px;
+    left:2px;
+    position: absolute;
+    transition: transform 0.2s linear, background .2s linear;
+}
+
+
+
+/* light mode */
+
+body.light{
+    background-color: #d8d8d8;
+}
+
+.form-container.light{
+   
+    background-color: #ffffff;
+  
+}
+
+
+.form-item.light:focus{
+    outline:2px solid #a03df7;
+    color:#a03df7;
+}
+
+.form-item.light{
+  
+    background:#f0eef7;
+
+    color: #585858;
+}
+
+.submit.light{
+  
+    background-color: #a03df7;
+    color: white;
+ 
+}
+
+
+.label-view-mode .ball.light
+{
+    background:#aca7a7;
 }
