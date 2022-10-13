@@ -1,2 +1,2 @@
 # bmi-calci
-A BMI calculator made using Express and Node js
+A  SIMPLE BMI calculator made using Express and Node js
