@@ -126,8 +126,8 @@ body.light{
 
 
 .form-item.light:focus{
-    outline:2px solid #a03df7;
-    color:#a03df7;
+    outline:2px solid #1d2cf5;
+    color:#1d2cf5;
 }
 
 .form-item.light{
@@ -139,7 +139,7 @@ body.light{
 
 .submit.light{
   
-    background-color: #a03df7;
+    background-color: #1d2cf5;
     color: white;
  
 }
